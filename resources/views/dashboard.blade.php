@@ -41,7 +41,7 @@
             <form action="{{ route('video') }}" method="post">
                 @csrf
                 <input type="text" class="form-control my-3" placeholder="Masukkan Kode Video" aria-label="Username"
-                    aria-describedby="basic-addon1" required>
+                    aria-describedby="basic-addon1" name="kode" required>
                 @if (session('status'))
                     <div class="alert alert-danger" id="status">
                         {{ session('status') }}
