@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'VideoController@index')->name('dashboard');
+Route::get('/test', 'VideoController@test')->name('test');
+Route::post('/video', 'VideoController@video')->name('video');
