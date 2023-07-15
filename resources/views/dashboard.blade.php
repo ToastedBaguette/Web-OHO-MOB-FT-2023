@@ -40,14 +40,16 @@
         <div class="p-5 text-center">
             <form action="{{ route('video') }}" method="post">
                 @csrf
-                <input type="text" class="form-control my-3" placeholder="Masukkan Kode Video" aria-label="Username"
-                    aria-describedby="basic-addon1" name="kode" required>
-                @if (session('status'))
-                    <div class="alert alert-danger" id="status">
-                        {{ session('status') }}
-                    </div>
-                @endif
-                <button id="btn-submit" type="submit" class="btn btn-primary">Kirim</button>
+                <div class="d-flex align-content-center my-3 mx-md-5">
+                    <input type="text" class="form-control " placeholder="Masukkan Kode Video"
+                        aria-label="Username" aria-describedby="basic-addon1" name="kode" required>
+                    @if (session('status'))
+                        <div class="alert alert-danger" id="status">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    <button id="btn-submit" type="submit" class="ms-2 btn btn-primary">Kirim</button>
+                </div>
             </form>
         </div>
     </section>
