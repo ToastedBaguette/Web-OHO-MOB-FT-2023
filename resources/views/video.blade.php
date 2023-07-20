@@ -13,18 +13,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
-        iframe{
+        iframe {
             height: 80%;
             width: 80%;
+        }
+
+        .background {
+            background-size: auto;
+            background-image: url({{ asset('img/background.jpg') }});
+            backdrop-filter: blur(5px);
         }
     </style>
 </head>
 
-<body style="height: 100%">
+<body class="background">
     <div class="text-center" style="height: 100%">
         <h1 class="text-mob text-white mt-3">Rute OHO</h1>
-        <iframe src="{{ $url }}?autoplay=1" title="Video OHO" frameborder="0"
-            allow="autoplay;" allowfullscreen>
+        <iframe src="{{ $url }}?autoplay=1" title="Video OHO" frameborder="0" allow="autoplay;"
+            allowfullscreen>
         </iframe>
     </div>
 
