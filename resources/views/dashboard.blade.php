@@ -18,7 +18,6 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
 </head>
 
 <body style="background-color: #120238;">
@@ -35,12 +34,11 @@
         </section>
         <section id="introduction">
             <div class="p-5 text-center">
-                <h4>Ini adalah kata pengantar. Karena sekarang belum diberikan oleh ED. Maka ITD sedang mengarang
-                    sekarang.
-                    Jujur bingung mau di isi apa lagi. Cuma mau bilang aja. Mohon konsum ITD dikasih double. Sekian
-                    terima
-                    gaji.</h4><br>
-                <h4 class="text-mob">MOHON CINTAI ITD</h4>
+                <h4>Welcome Teman-Teman!
+                    Untuk mengetahui rute Open House Ormawa, silahkan memasukkan kode
+                    yang telah didapatkan pada sesi Sharing Senior.
+                </h4><br>
+                <h4 class="text-mob">VIRTUS ADAPTATIONIS MAGNA EST</h4>
             </div>
         </section>
         <section id="inputcode">
@@ -48,16 +46,18 @@
                 <form action="{{ route('video') }}" method="post">
                     @csrf
                     <div class="d-flex flex-row justify-content-center my-3 mx-md-5">
-                        <div class="col-6">
+                        <div class="col-10">
                             <input type="text" class="form-control " placeholder="Masukkan Kode Video"
                                 aria-label="Username" aria-describedby="basic-addon1" name="kode" required>
                             @if (session('status'))
-                                <div class="alert alert-danger" id="status">
+                                <div class="alert alert-danger mt-2" id="status">
                                     {{ session('status') }}
                                 </div>
                             @endif
                         </div>
-                        <button id="btn-submit" type="submit" class="ms-2 btn btn-success">Kirim</button>
+                        <div>
+                            <button id="btn-submit" type="submit" class="ms-2 btn btn-success">Kirim</button>
+                        </div>
                     </div>
                 </form>
             </div>
