@@ -18,6 +18,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
 </head>
 
 <body style="background-color: #120238;">
@@ -39,21 +40,23 @@
                     Jujur bingung mau di isi apa lagi. Cuma mau bilang aja. Mohon konsum ITD dikasih double. Sekian
                     terima
                     gaji.</h4><br>
-                <h4><b>MOHON CINTAI ITD</b></h4>
+                <h4 class="text-mob">MOHON CINTAI ITD</h4>
             </div>
         </section>
         <section id="inputcode">
             <div class="p-5 text-center">
                 <form action="{{ route('video') }}" method="post">
                     @csrf
-                    <div class="d-flex align-content-center my-3 mx-md-5">
-                        <input type="text" class="form-control " placeholder="Masukkan Kode Video"
-                            aria-label="Username" aria-describedby="basic-addon1" name="kode" required>
-                        @if (session('status'))
-                            <div class="alert alert-danger" id="status">
-                                {{ session('status') }}
-                            </div>
-                        @endif
+                    <div class="d-flex flex-row justify-content-center my-3 mx-md-5">
+                        <div class="col-6">
+                            <input type="text" class="form-control " placeholder="Masukkan Kode Video"
+                                aria-label="Username" aria-describedby="basic-addon1" name="kode" required>
+                            @if (session('status'))
+                                <div class="alert alert-danger" id="status">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+                        </div>
                         <button id="btn-submit" type="submit" class="ms-2 btn btn-success">Kirim</button>
                     </div>
                 </form>
